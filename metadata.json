@@ -1,0 +1,6 @@
+{
+  "name": "Angkatan 21 RE21LIENCE",
+  "description": "High school generation website with admin CMS capabilities for RE21LIENCE",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

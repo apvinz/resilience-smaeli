@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "GlobalConfig": {
+      "title": "GlobalConfig",
+      "description": "Global website configurations, logos, general cohort background portraits, documentation gallery, and honors list",
+      "type": "object",
+      "properties": {
+        "logoSekolah": { "type": "string", "description": "Base64 encoded string or URL of the school logo" },
+        "logoAngkatan": { "type": "string", "description": "Base64 encoded string or URL of the cohort/generation logo" },
+        "generationBg": { "type": "string", "description": "Base64 encoded string or URL of the interactive landing page banner" },
+        "generationPortrait": { "type": "string", "description": "Base64 or URL of the generation portrait image" },
+        "generationHero": { "type": "object", "description": "Contains title, subtitle, and description texts for the home hero section" },
+        "generationDocs": { "type": "array", "description": "List of system photo documentation records" },
+        "generationAchievements": { "type": "array", "description": "List of custom achievements of the generation" }
+      },
+      "required": ["logoSekolah", "logoAngkatan", "generationBg", "generationHero"]
+    },
+    "ClassConfig": {
+      "title": "ClassConfig",
+      "description": "Custom parameters, lists of achievements, dynamic structure and pupil catalogs of an individual classroom",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Display code for this classroom, e.g. X.1" },
+        "logo": { "type": "string", "description": "Base64 encoded string of class emblem" },
+        "bg": { "type": "string", "description": "Base64 encoded string of class hero cover image" },
+        "tagline": { "type": "string", "description": "Text tagline or code representation of the class" },
+        "slogan": { "type": "string", "description": "Descriptive greeting slogan written by class officers" },
+        "structure": { "type": "object", "description": "Dynamic key-value pairs mapping roles (wali, ketua, wakil, dst) to information and photos" },
+        "members": { "type": "array", "description": "List of interactive student members records" },
+        "achievements": { "type": "array", "description": "List of honors, stellar awards and credentials of the class" },
+        "photos": { "type": "array", "description": "Gallery photographs collection of class moments" },
+        "isAvailable": { "type": "boolean", "description": "Flag indicating if the class page is actively browseable" }
+      },
+      "required": ["id", "tagline", "slogan", "structure", "members", "isAvailable"]
+    }
+  },
+  "firestore": {
+    "/config/{configId}": {
+      "schema": "GlobalConfig",
+      "description": "Holds general configuration states including the central logos and home details"
+    },
+    "/classes/{classId}": {
+      "schema": "ClassConfig",
+      "description": "Details of structure, photos, slogans, and members assigned to a particular class"
+    }
+  }
+}

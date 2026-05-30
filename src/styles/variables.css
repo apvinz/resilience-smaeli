@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --color-bg: #07080A;
+  --color-surface: #0E1015;
+  --color-surface-2: #14161E;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-accent: #FF7A00;
+  --color-accent-hover: #E06600;
+  --color-cta: #FF7A00;
+  --color-cta-hover: #E06600;
+  --color-text: #F3F4F6;
+  --color-text-muted: #9CA3AF;
+  --color-admin: #FF7A00;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 12px 40px rgba(255, 122, 0, 0.15);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
